@@ -1,7 +1,7 @@
 package com.lhj.easyutils.base;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.lhj.easyutils.mvp.BaseMvpView;
 import com.lhj.easyutils.mvp.BasePresenter;
@@ -9,7 +9,7 @@ import com.lhj.easyutils.mvp.PresenterDispatch;
 import com.lhj.easyutils.mvp.PresenterProviders;
 
 
-public abstract class BaseMvpActivity<P extends BasePresenter> extends AppCompatActivity implements BaseMvpView {
+public abstract class BaseMvpActivity<P extends BasePresenter> extends Activity implements BaseMvpView {
 
     private PresenterProviders mPresenterProviders;
     private PresenterDispatch mPresenterDispatch;
