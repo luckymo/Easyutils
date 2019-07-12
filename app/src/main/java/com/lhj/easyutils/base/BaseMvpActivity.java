@@ -24,6 +24,7 @@ public abstract class BaseMvpActivity<P extends BasePresenter> extends Activity 
         mPresenterDispatch.attachView(this, this);
         mPresenterDispatch.onCreatePresenter(savedInstanceState);
         init();
+        initView();
     }
 
     @Override
@@ -35,6 +36,8 @@ public abstract class BaseMvpActivity<P extends BasePresenter> extends Activity 
     protected abstract int getContentView();
 
     public abstract void init();
+
+    public abstract void initView();
 
     protected P getPresenter() {
         return mPresenterProviders.getPresenter(0);
