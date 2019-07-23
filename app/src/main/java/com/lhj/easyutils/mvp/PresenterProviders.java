@@ -136,4 +136,10 @@ public class PresenterProviders {
         return mPresenterMap;
     }
 
+    public void release() {
+      mPresenterMap=new PresenterMap();
+        mClass=null;
+       mActivity=null;
+         mFragment=null;
+    }
 }

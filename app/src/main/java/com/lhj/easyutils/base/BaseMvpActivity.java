@@ -65,6 +65,7 @@ public abstract class BaseMvpActivity<P extends BasePresenter> extends Activity 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mPresenterDispatch.detachView();
+        mPresenterDispatch.onDestroyPresenter();
+        mPresenterProviders.release();
     }
 }
